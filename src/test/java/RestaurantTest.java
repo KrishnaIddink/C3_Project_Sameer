@@ -80,4 +80,16 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     
+  //>>>>>>>>>>>>>>>>>>>>>>ORDER<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void calculating_total_order_value_for_existing_items_should_return_expected_value() throws  itemNotFoundException {
+        //WRITE UNIT TEST CASE HERE
+    }
+
+    @Test
+    public void calculating_total_order_value_for_non_existing_item_should_throw_exception() throws itemNotFoundException {
+        //WRITE UNIT TEST CASE HERE
+    }
+    //<<<<<<<<<<<<<<<<<<<<ORDER>>>>>>>>>>>>>>>>>>>>>>>>>>
+    
 }

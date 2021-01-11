@@ -15,6 +15,11 @@ public class Restaurant {
         this.openingTime = openingTime;
         this.closingTime = closingTime;
     }
+    
+    public Integer calculateTotalOrderValue(List<String> items) throws itemNotFoundException {
+    	return null;
+    	//DELETE ABOVE RETURN STATEMENT AND WRITE CODE HERE
+    }
 
     public boolean isRestaurantOpen() {
     	return (getCurrentTime().isBefore(this.closingTime)) && (getCurrentTime().isAfter(this.openingTime));
