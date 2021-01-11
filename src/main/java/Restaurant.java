@@ -17,7 +17,18 @@ public class Restaurant {
     }
     
     public Integer calculateTotalOrderValue(List<String> items) throws itemNotFoundException {
-    	return null;
+    	int totalOrderValue = 0;
+    	Item item;
+    	for(String itemName : items) {
+    		item = findItemByName(itemName);
+    		if(item!=null) {
+    			totalOrderValue += item.getPrice();
+    		}
+    		else {
+    			throw new itemNotFoundException(itemName);
+    		}
+    	}
+    	return totalOrderValue;
     	//DELETE ABOVE RETURN STATEMENT AND WRITE CODE HERE
     }
 

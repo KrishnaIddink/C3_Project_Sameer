@@ -2,6 +2,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -84,11 +86,21 @@ class RestaurantTest {
     @Test
     public void calculating_total_order_value_for_existing_items_should_return_expected_value() throws  itemNotFoundException {
         //WRITE UNIT TEST CASE HERE
+    	List<String> items = new ArrayList<>();
+    	items.add("Sweet corn soup");
+    	items.add("Vegetable lasagne");
+    	
+        assertEquals(388, restaurant.calculateTotalOrderValue(items));
     }
 
     @Test
     public void calculating_total_order_value_for_non_existing_item_should_throw_exception() throws itemNotFoundException {
         //WRITE UNIT TEST CASE HERE
+    	List<String> items = new ArrayList<>();
+    	items.add("French fries");
+    	
+    	assertThrows(itemNotFoundException.class,
+                ()->restaurant.calculateTotalOrderValue(items));
     }
     //<<<<<<<<<<<<<<<<<<<<ORDER>>>>>>>>>>>>>>>>>>>>>>>>>>
     
